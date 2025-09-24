@@ -8,6 +8,12 @@ exports.contactMessage = ({
   createdAt,
 }) => {
   const fullName = `${firstName} ${lastName}`;
+  let now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+
+  console.log(`Current Time: ${hours}:${minutes}:${seconds}`);
 
   return `<!DOCTYPE html>
   <html lang="en">
@@ -97,10 +103,7 @@ exports.contactMessage = ({
           <a class="btn" href="mailto:${email}?subject=Re:%20Your%20message%20to%20Maazster">Reply to ${fullName}</a>
         </div>
 
-        <div class="meta">Received: ${new Date(createdAt).toLocaleString(
-          "en-GB",
-          { timeZone: "Asia/Kolkata" }
-        )} (Asia/Kolkata)</div>
+        <div class="meta">Received:${hours}:${minutes}:${seconds} (Asia/Kolkata)</div>
       </div>
 
       <div class="footer">

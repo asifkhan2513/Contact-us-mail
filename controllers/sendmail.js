@@ -11,16 +11,16 @@ exports.sendmail = async (req, res) => {
         .status(400)
         .json({ success: false, error: "Please provide all required fields" });
     }
-
-    const html = contactMessage(
+    const fullName = `${firstName} ${lastName}`;
+    const html = contactMessage({
       firstName,
       lastName,
       phone,
       email,
       course,
       message,
-      createdAt
-    );
+      createdAt,
+    });
 
     const newHTMl = Message.create({
       firstName,
@@ -32,7 +32,13 @@ exports.sendmail = async (req, res) => {
       createdAt,
     });
     await newHTMl.save();
-    await mailSender("asifkhan251301@gmail.com", "New Contact Message", html);
+    // await mailSender("asifkhan251301@gmail.com", "New Contact Message", html);
+    await mailSender(
+      "avneesh7inox@gmail.com",
+      "New Contact Message",
+      html,
+      fullName
+    );
 
     return res
       .status(200)
