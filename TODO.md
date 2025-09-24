@@ -1,0 +1,5 @@
+- [x] Add "start": "node index.js" to package.json
+- [x] Fix index.js: change import to const mail = require("./routes/mail")
+- [x] Fix routes/mail.js: change import to const {sendmail} = require("../controllers/sendmail")
+- [x] Complete controllers/sendmail.js: add (req, res), destructure req.body, generate HTML, send mail to asifkhan251301@gmail.com, return response
+- [x] Run the server with node index.js
