@@ -1,5 +1,6 @@
 const mailSender = require("../utils/mailSender");
 const { contactMessage } = require("../mail/templates/recievemail");
+const Message = require("../model/message");
 
 exports.sendmail = async (req, res) => {
   try {
@@ -21,6 +22,16 @@ exports.sendmail = async (req, res) => {
       createdAt
     );
 
+    const newHTMl = Message.create({
+      firstName,
+      lastName,
+      phone,
+      email,
+      course,
+      message,
+      createdAt,
+    });
+    await newHTMl.save();
     await mailSender("asifkhan251301@gmail.com", "New Contact Message", html);
 
     return res

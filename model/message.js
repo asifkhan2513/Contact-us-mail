@@ -1,5 +1,5 @@
-const moongoose = require("mongoose");
-const Message = new moongoose.Schema({
+const mongoose = require("mongoose");
+const Message = new mongoose.Schema({
   firstName: {
     type: String,
     required: true,
