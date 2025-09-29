@@ -1,6 +1,6 @@
 // ./config/database.js
 const mongoose = require("mongoose");
-require("dotenv").config();
+require('@dotenvx/dotenvx').config()
 
 const connect = async () => {
   try {

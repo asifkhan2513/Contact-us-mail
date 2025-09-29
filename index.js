@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mail = require("./routes/mail");
 const database = require("./config/database");
-require("dotenv").config();
+require('@dotenvx/dotenvx').config()
 
 const PORT = process.env.PORT || 4000;
 
@@ -17,8 +17,8 @@ app.use(cookieParser());
 // app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "http://localhost:3000", // frontend origin
-    credentials: true, // allow cookies/session
+    origin: process.env.ORIGiN,
+    credentials: true,
   })
 );
 

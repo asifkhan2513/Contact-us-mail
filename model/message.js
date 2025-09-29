@@ -6,7 +6,7 @@ const Message = new mongoose.Schema({
   },
   lastName: {
     type: String,
-    required: true,
+    // required: true,
   },
   phone: {
     type: Number,
@@ -15,7 +15,7 @@ const Message = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
   },
   Course: {
     type: String,

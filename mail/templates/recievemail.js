@@ -78,7 +78,7 @@ exports.contactMessage = ({
 
     <div class="email-wrapper" role="article" aria-roledescription="email">
       <div class="header">
-        <img class="logo" src="../assets/logo.png" alt="Maazster logo" />
+        <img class="logo" src="https://maazstertech.com/assets/img/logo/maazsterblack.png" alt="Maazster logo" />
         <div>
           <div class="brand-name">Maazster</div>
           <div style="font-size:12px; color: rgba(255,255,255,0.85); margin-top:2px;">New contact request received</div>
